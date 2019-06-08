@@ -1,0 +1,15 @@
+img{
+    width: 100%;
+    height: auto;
+}
+
+
+.bg {
+    background: url(../img/desainprplui1REVISI.png);
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+}

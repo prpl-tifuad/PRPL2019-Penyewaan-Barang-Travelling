@@ -1,0 +1,172 @@
+.bismillah{
+    background: transparent;
+}
+
+.alhamdulillah
+{
+    margin-top: -100px;
+    background-image: url(desainprplui1REVISI.png);
+    height: 768px;
+    background-position: cover;
+}
+
+.alhamdulillah2
+{
+    background-image: url(desainprplui2.png);
+    height: 768px;
+    background-position: cover;
+}
+
+.button
+{
+    position: absolute;
+    top: 370px;
+    right: 970px;
+    width: 200px;
+    height: 100px;
+}
+
+.buttonnext
+{
+    position: absolute;
+    top: 570px;
+    right: 150px;
+    width: 200px;
+    height: 100px;
+}
+
+.buttonback
+{
+    position: absolute;
+    top: 400px;
+    right: 900px;
+    width: 200px;
+    height: 100px;
+}
+
+.container
+{
+    position: absolute;
+    top: 100px;
+    right: 970px;
+    width: 200px;
+    height: 100px;
+}
+
+.container2
+{
+    position: absolute;
+    top: 100px;
+    right: 600px;
+    width: 200px;
+    height: 100px;
+}
+
+.container3
+{
+    position: absolute;
+    top: 400px;
+    right: 600px;
+    width: 200px;
+    height: 100px;
+}
+
+.notfound
+{
+    background-color: aqua;
+    position: absolute;
+    top: 300px;
+    right: 900px;
+    width: 200px;
+    height: 100px;
+    font-family: "Warung Kopi", serif;
+}
+
+.containerkiri
+{
+    position: absolute;
+    top: 300px;
+    right: 950px;
+    width: 200px;
+    height: 100px;
+}
+
+
+.containerkanan
+{
+    position: absolute;
+    top: 300px;
+    right: 600px;
+    width: 200px;
+    height: 100px;
+}
+
+.containerbawah
+{
+    position: absolute;
+    top: 590px;
+    right: 600px;
+    width: 200px;
+    height: 100px;
+}
+
+.containerform
+{
+    position: absolute;
+    top: 25px;
+    right: 620px;
+    width: 200px;
+    height: 100px;
+}
+
+.img
+{
+    width : 200px;
+    height : 200px;
+}
+
+.imgbutton
+{
+    width : 30px;
+    height : 30px;
+}
+
+.remember
+{
+    background-color: aqua;
+    position: absolute;
+    top: 300px;
+    right: 900px;
+    width: 200px;
+    height: 100px;
+    font-family: "Warung Kopi", serif;
+}
+
+h2{
+	color: #4311CF;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th	{
+    background-color: black;
+    color: white;
+}
+#saveimg{
+	width: 20px;
+	height: 20px;
+}
+table tr td input{
+	width: 40px;
+}
