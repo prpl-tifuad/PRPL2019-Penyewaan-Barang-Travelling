@@ -1,0 +1,14 @@
+* Fatkhulia - Lutfi - Panji *
+
+Sebelumnya: dihapus karena susunan file dan foldernya belum terlihat rapi, dan dilakukan perbaikan.
+
+Fitur & Modul:
+1) Fitur Pencarian Barang
+2) Modul Menampilkan Barang
+3) Modul Pemesanan Barang
+4) Validasi data inputan user
+
+Uploaded: 8-9 June 2019:
+1) Perubahan dan Perbaikan Susunan File & Folder
+2) Penambahan Database (Database tidak sengaja terhapus, akan dilakukan pembuatan database ulang)
+3) Perbaikan Modul Menampilkan Barang, dengan sekarang Menampilkan Barang Menggunakan Query (Database)
