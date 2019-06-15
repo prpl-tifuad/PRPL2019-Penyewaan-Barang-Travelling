@@ -13,7 +13,9 @@ Uploaded: 8-9 June 2019:
 2) Penambahan Database (Database tidak sengaja terhapus, akan dilakukan pembuatan database ulang)
 3) Perbaikan Modul Menampilkan Barang, dengan sekarang Menampilkan Barang Menggunakan Query (Database)
 
--> Database sudah dimasukkan
+Uploaded: 11 June 2019:
+1) Perbaikan pada file dalam folder categories: menampilkan data produk menggunakan database
+2) Upload database dengan nama travel.sql
 
 Uploaded: 15 June 2019:
 1) Penambahan column database untuk Shopping Cart
