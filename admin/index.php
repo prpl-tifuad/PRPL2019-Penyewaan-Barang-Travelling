@@ -13,31 +13,31 @@
 <head>
     <div id="kepala1" class="shadow-sm py-1 sticky-top " >
         <nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand a" href="index.html">Mlaku.co</a>
+            <a class="navbar-brand a" href="index.php">Mlaku.co</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse sticky" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto pl-2">
+                <ul class="navbar-nav mr-auto pl-2">
+                    <!-- <li class="nav-item active">
+                        <a class="nav-link" href="tambahproduk.php">Tambah Barang <span class="sr-only">(current)</span></a>
+                    </li> -->
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="view.php">Lihat Barang <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Categories
-                        </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="./categories/alatkemah.php">Alat Kemah</a>
-                        <a class="dropdown-item" href="./categories/alathiking.php">Alat Hiking</a>
-                        <a class="dropdown-item" href="./categories/pakaiantravelling.php">Pakaian Travelling</a>
-                    </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="lihatpesanan.php">Lihat Daftar Pemesanan <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
                 <!-- copas ini pak -->
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ADMIN
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="">Log Out</a>
+                </div>
                 <form class="form-inline my-2 my-lg-0" method="GET" action="pencarian.php">
                     <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search" onkeyup="this.value = this.value.toLowerCase();"> 
             <!--      <button class="btn btn-outline-success my-2 my-sm-0" name="search" type="submit">Search</button>-->

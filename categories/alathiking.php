@@ -25,7 +25,7 @@ include 'product.php';
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -62,7 +62,7 @@ include 'product.php';
     <!-- <div class="containerkiri"> -->
       <div class="card-body">
         <div class="card-title"><?= $item[3]['nama_bar'], ": Rp", $item[3]['harga'], ",-"?> / 24 Jam</div>
-        <a href="../transaction/cart.php?id_bar=1"><img src="../img/cart.png" class="imgbutton" ></a>
+        <a href="../transaction/cart.php?id_bar=4"><img src="../img/cart.png" class="imgbutton" ></a>
       </div>
     </div>
   </td>
@@ -74,7 +74,7 @@ include 'product.php';
     <!-- <div class="containerkiri"> -->
       <div class="card-body">
         <div class="card-title"><?= $item[5]['nama_bar'], ": Rp", $item[5]['harga'], ",-"?> / 24 Jam</div>
-        <a href="../transaction/cart.php??id_bar=5"><img src="../img/cart.png" class="imgbutton" ></a>
+        <a href="../transaction/cart.php?id_bar=6"><img src="../img/cart.png" class="imgbutton" ></a>
       </div>
     </div>
   </tr>
@@ -86,7 +86,7 @@ include 'product.php';
     <!-- <div class="containerkiri"> -->
       <div class="card-body">
         <div class="card-title"><?= $item[6]['nama_bar'], ": Rp", $item[6]['harga'], ",-"?> / 24 Jam</div>
-        <a href="../transaction/cart.php??id_bar=6"><img src="../img/cart.png" class="imgbutton" ></a>
+        <a href="../transaction/cart.php?id_bar=7"><img src="../img/cart.png" class="imgbutton" ></a>
       </div>
     </div>
   </tr>
@@ -98,7 +98,7 @@ include 'product.php';
     <!-- <div class="containerkiri"> -->
       <div class="card-body">
         <div class="card-title"><?= $item[7]['nama_bar'], ": Rp", $item[7]['harga'], ",-"?> / 24 Jam</div>
-        <a href="../transaction/cart.php?id_bar=7"><img src="../img/cart.png" class="imgbutton" ></a>
+        <a href="../transaction/cart.php?id_bar=8"><img src="../img/cart.png" class="imgbutton" ></a>
       </div>
     </div>
   </tr>

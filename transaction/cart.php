@@ -2,22 +2,27 @@
 session_start();
 require '../dbconnect.php';
 require 'item.php';
+// $id_bar=$_GET['id_bar'];
 
-if(isset($_GET['id']) && !isset($_POST['update']))  { 
-	$sql = "SELECT * FROM product WHERE id=".$_GET['id'];
-	$result = mysqli_query($con, $sql);
+if(isset($_GET['id_bar']) && !isset($_POST['update']))  { 
+	$sql = "SELECT * FROM itemproduk WHERE id_bar=".$_GET['id_bar'];
+
+	$result = mysqli_query($konek, $sql);
+		// var_dump($result); die();
 	$product = mysqli_fetch_object($result); 
 	$item = new Item();
-	$item->id = $product->id;
-	$item->name = $product->name;
-	$item->price = $product->price;
-    $iteminstock = $product->quantity;
+	$item->id = $product->id_bar;
+	$item->name = $product->nama_bar;
+	$item->price = $product->harga;
+    $iteminstock = $product->stok;
 	$item->quantity = 1;
+
+	
 	// Check product is existing in cart
 	$index = -1;
 	$cart = unserialize(serialize($_SESSION['cart'])); // set $cart as an array, unserialize() converts a string into array
 	for($i=0; $i<count($cart);$i++)
-		if ($cart[$i]->id == $_GET['id']){
+		if ($cart[$i]->id == $_GET['id_bar']){
 			$index = $i;
 			break;
 		}
@@ -52,7 +57,6 @@ if(isset($_POST['update'])) {
 <table id="t01">
 <tr>
 	<th>Option</th>
-	<th>Id</th>
 	<th>Name</th>
 	<th>Price</th>
 	<th>Quantity</th> 
@@ -67,7 +71,7 @@ if(isset($_POST['update'])) {
  ?>	
    <tr>
     	<td><a href="cart.php?index=<?php echo $index; ?>" onclick="return confirm('Are you sure?')" >Delete</a> </td>
-   		<td> <?php echo $cart[$i]->id; ?> </td>
+   		
    		<td> <?php echo $cart[$i]->name; ?> </td>
    		<td>Rp. <?php echo $cart[$i]->price; ?> </td>
         <td> <input type="number" min="1" value="<?php echo $cart[$i]->quantity; ?>" name="quantity[]"> </td>  
@@ -86,11 +90,10 @@ if(isset($_POST['update'])) {
 </table>
 </form>
 <br>
-<a href="index.php">Continue Shopping</a> | <a href="checkout.php">Checkout</a>
+<a href="../index.php">Continue Shopping</a> | <a href="form.php">Checkout</a>
 <?php 
+$_SESSION['s']=$s;
 if(isset($_GET["id"]) || isset($_GET["index"])){
  header('Location: cart.php');
 } 
-?>
-
 ?>
