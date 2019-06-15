@@ -12,3 +12,12 @@ Uploaded: 8-9 June 2019:
 1) Perubahan dan Perbaikan Susunan File & Folder
 2) Penambahan Database (Database tidak sengaja terhapus, akan dilakukan pembuatan database ulang)
 3) Perbaikan Modul Menampilkan Barang, dengan sekarang Menampilkan Barang Menggunakan Query (Database)
+
+-> Database sudah dimasukkan
+
+Uploaded: 15 June 2019:
+1) Penambahan column database untuk Shopping Cart
+2) Penambahan modul admin: (lihat barang, lihat daftar pemesanan, lihat detail pemesanan, tambah barang, edit data barang), belum ada sesi admin
+*opsi hapus item gak dipakai, karena barang pasti ada/stok=0
+3) Penambahan Shopping Cart pada modul pemesanan
+4) Penambahan modul-modul pendukung transaksi untuk pemesanan barang (keranjang belanja, form (versi terbaru), checkout page)
