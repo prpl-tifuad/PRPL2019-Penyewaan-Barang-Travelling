@@ -1,7 +1,8 @@
 <?php
+session_start();
 include '../dbconnect.php';
-include 'product.php';  
-
+// include 'product.php';  
+$s=$_SESSION['s'];
 ?>
 <!doctype html>
 <html lang="en">
@@ -25,9 +26,9 @@ include 'product.php';
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-        <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Categories
         </a>
@@ -39,7 +40,7 @@ include 'product.php';
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">About Us</a>
-      </li>
+      </li> -->
     </ul>
       
     <!-- copas ini pak -->
@@ -53,60 +54,46 @@ include 'product.php';
   </div>
 </nav>
 
-<div class="table">
-  <tr>
-  <td class="containerkiri">
-    <div class="card" style="width: 18rem;">
-      <?= "<img src='../img/images/".$item[0]['nama_foto']."' class='img card-img-top'>" ?>
-    <!-- </div> -->
-    <!-- <div class="containerkiri"> -->
-      <div class="card-body">
-        <div class="card-title"><?= $item[0]['nama_bar'], ": Rp", $item[0]['harga'], ",-"?> / 24 Jam</div>
-        <a href="../transaction/cart.php?id_bar=1"><img src="../img/cart.png" class="imgbutton" ></a>
-      </div>
-    </div>
-  </td>
+<form method="GET" action="upload.php">
+<div class="jumbotron jumbotron-fluid alhamdulillah2">
+    <div class="containerform">
 
-  <tr class="containerkanan">
-    <div class="card" style="width: 18rem;">
-      <?= "<img src='../img/images/".$item[1]['nama_foto']."' class='img card-img-top'>" ?>
-    <!-- </div> -->
-    <!-- <div class="containerkiri"> -->
-      <div class="card-body">
-        <div class="card-title"><?= $item[1]['nama_bar'], ": Rp", $item[1]['harga'], ",-"?> / 24 Jam</div>
-        <a href="../transaction/cart.php??id_bar=2"><img src="../img/cart.png" class="imgbutton" ></a>
-      </div>
-    </div>
-  </tr>
+        <div class="form-group">
+        
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Masukkan Email" required>
+            <br>
+            <label for="text">Nama Lengkap</label>
+            <input type="text" class="form-control" name="namalengkap" placeholder="Masukkan Nama Lengkap" required>
+            <br>
 
-  <tr class="containerbawah">
-    <div class="card" style="width: 18rem;">
-      <?= "<img src='../img/images/".$item[2]['nama_foto']."' class='img card-img-top'>" ?>
-    <!-- </div> -->
-    <!-- <div class="containerkiri"> -->
-      <div class="card-body">
-        <div class="card-title"><?= $item[2]['nama_bar'], ": Rp", $item[2]['harga'], ",-"?> / 24 Jam</div>
-        <a href="../transaction/cart.php??id_bar=3"><img src="../img/cart.png" class="imgbutton" ></a>
-      </div>
-    </div>
-  </tr>
+            <label for="id">ID Pelanggan (KTP/SIM)</label>
+            <input type="text" class="form-control" name="id" placeholder="Masukkan ID" required>
+            <br>
 
-  <tr class="containerbawah">
-    <div class="card" style="width: 18rem;">
-      <?= "<img src='../img/images/".$item[4]['nama_foto']."' class='img card-img-top'>" ?>
-    <!-- </div> -->
-    <!-- <div class="containerkiri"> -->
-      <div class="card-body">
-        <div class="card-title"><?= $item[4]['nama_bar'], ": Rp", $item[4]['harga'], ",-"?> / 24 Jam</div>
-        <a href="../transaction/cart.php?id_bar=5"><img src="../img/cart.png" class="imgbutton" ></a>
-      </div>
-    </div>
-  </tr>
+            <label for="lamasewa">Lama Penyewaan (hari)</label>
+            <input type="number" min=1 class="form-control" name="lamasewa" placeholder="Masukkan Lama Penyewaan" required>
+            <br>
+            
+            <label for="tanggalpsn">Tanggal Pesan</label>
+            <input type="date" class="form-control" name="tanggalpsn" min="<?= date('Y-m-d') ?>" value="<?= date('Y-m-d') ?>" required>
 
+            <input type="hidden" name="kodebar" value="<?= $kodebar ?>">
+        </div>
+            
+        <input type="submit" value="Next" class="btn btn-primary">
+
+    </div> 
 </div>
+<?php
+   $cart = unserialize(serialize($_SESSION['cart']));
+   $_SESSION['cart']=$cart;
+   $_SESSION['s']=$s;
+?>
+</form>
 
 <div class="buttonnext">
-<a href="alathiking2.php"><button type="button" class="btn btn-success">Next</button></a>
+<!-- <a href="alathiking2.php"><button type="button" class="btn btn-success">Next</button></a> -->
   </div>
 
     <!-- Optional JavaScript -->
@@ -116,3 +103,4 @@ include 'product.php';
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
+

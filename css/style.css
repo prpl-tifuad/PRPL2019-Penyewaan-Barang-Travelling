@@ -170,3 +170,104 @@ table#t01 th	{
 table tr td input{
 	width: 40px;
 }
+
+.tulisan_login{
+	text-align: center;
+	/*membuat semua huruf menjadi kapital*/
+	text-transform: uppercase;
+}
+
+.posisi_login
+{
+    position: absolute;
+    top: 100px;
+    right: 620px;
+    width: 200px;
+    height: 100px;
+	width: 300px;
+}
+.kotak_login{
+	width: 300px;
+	background:aqua;
+    /*meletakkan form ke tengah*/
+    
+	margin: 40px auto;
+	padding: 30px 20px;
+}
+
+label{
+	font-size: 11pt;
+}
+
+.form_login{
+	/*membuat lebar form penuh*/
+	box-sizing : border-box;
+	width: 100%;
+	padding: 10px;
+	font-size: 11pt;
+	margin-bottom: 20px;
+}
+
+.tombol_login{
+	background: #46de4b;
+	color: white;
+	font-size: 11pt;
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+}
+
+.link{
+	color: #232323;
+	text-decoration: none;
+	font-size: 10pt;
+}
+
+.logo_input
+{
+    position: absolute;
+    top: 250px;
+    right: 800px;
+    width: 200px;
+    height: 100px;
+}
+
+.input_admin
+{
+    position: absolute;
+    top: 275px;
+    right: 830px;
+    width: 200px;
+    height: 100px;
+}
+
+.logo_lihat
+{
+    position: absolute;
+    top: 250px;
+    right: 500px;
+    width: 200px;
+    height: 100px;
+}
+
+.lihat_admin
+{
+    position: absolute;
+    top: 275px;
+    right: 530px;
+    width: 200px;
+    height: 100px;
+}
+
+.tulisan
+{
+    font-family: sans-serif;
+    font-size: 40px;
+    position : absolute;
+    top: 100px;
+    left: 500px;
+    /* right: 530px;
+    width: 200px;
+    height: 100px; */
+}
