@@ -1,12 +1,13 @@
 <?php include 'support.php' ?>
 
-<link rel="stylesheet" href="css/header.css">
-<link rel="stylesheet" href="css/body.css">
-<link rel="stylesheet" href="css/footer.css">
-
-<script type="text/javascript" src="js/script.js"></script>
-
 <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    
     <div id="kepala1" class="shadow-sm py-1 sticky-top " >
         <nav class="navbar navbar-expand-md navbar-light">
             <a class="navbar-brand a" href="index.html">Mlaku.co</a>
@@ -37,7 +38,7 @@
                 <a class="nav-link my-2 my-lg-0 ml-5" href="login.php">Sign in for Admin</a>
                 <form class="form-inline my-2 my-lg-0" method="GET" action="pencarian.php">
                     <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search" onkeyup="this.value = this.value.toLowerCase();"> 
-            <!--      <button class="btn btn-outline-success my-2 my-sm-0" name="search" type="submit">Search</button>-->
+                     <!-- <button class="btn btn-outline-success my-2 my-sm-0" name="search" type="submit">Search</button>-->
                 
                 </form>
                 <!-- sampai sini, ganti aja yang sebelumnya. -->
@@ -46,7 +47,28 @@
     </div>
 </head>
 
-<body class="bg">
-    
+<body>    
 
-</body>
+<div class="jumbotron jumbotron-fluid alhamdulillah2">
+    <div class="container">  
+        <div class="posisi_login">
+            <div class="kotak_login">
+                <p class="tulisan_login">Silahkan login</p>
+
+                <form method="POST" action="process.php">
+                    <label>Username</label>
+                    <input type="text" name="username" class="form_login" placeholder="Username" required oninvalid="this.setCustomValidity('Username wajib diisi!')" oninput="setCustomValidity('')">
+
+
+                    <label>Password</label>
+                    <input type="password" name="password" class="form_login" placeholder="Password" required oninvalid="this.setCustomValidity('Password wajib diisi!')" oninput="setCustomValidity('')">
+
+                    <input type="submit" class="tombol_login" value="LOGIN">
+                    <?php if(isset($_GET["failed"])) echo "Incorrect Username/Password!"; ?>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+  </body>
+</html>

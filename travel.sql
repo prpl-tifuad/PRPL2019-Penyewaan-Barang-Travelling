@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2019 at 08:19 AM
+-- Generation Time: Jun 15, 2019 at 01:38 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `travel`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detailpemesanan`
+--
+
+CREATE TABLE `detailpemesanan` (
+  `no_pemesanan` varchar(15) NOT NULL,
+  `lama_pesan` int(11) NOT NULL,
+  `total_harga` int(11) NOT NULL,
+  `tanggal_pesan` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detailpemesanan`
+--
+
+INSERT INTO `detailpemesanan` (`no_pemesanan`, `lama_pesan`, `total_harga`, `tanggal_pesan`) VALUES
+('572WYiftzcSIDMQ', 3, 180000, '2019-06-14'),
+('cOBU7CYjiTulKSQ', 3, 240000, '2019-06-15');
 
 -- --------------------------------------------------------
 
@@ -87,9 +108,62 @@ INSERT INTO `itemproduk` (`id_bar`, `nama_bar`, `stok`, `harga`, `id_foto`) VALU
 (12, 'Jaket 3', 20, 25000, 12),
 (13, 'Celana', 20, 20000, 13);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pemesanan`
+--
+
+CREATE TABLE `pemesanan` (
+  `id_pesan` int(11) NOT NULL,
+  `id_pelanggan` varchar(20) NOT NULL,
+  `nama_pelanggan` varchar(50) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `no_pemesanan` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pemesanan`
+--
+
+INSERT INTO `pemesanan` (`id_pesan`, `id_pelanggan`, `nama_pelanggan`, `email`, `no_pemesanan`) VALUES
+(9, '123123', 'sadbas', 'aba@asda', '572WYiftzcSIDMQ'),
+(10, '13124', 'asaaa', 'aa@aaa', 'cOBU7CYjiTulKSQ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `produkpemesanan`
+--
+
+CREATE TABLE `produkpemesanan` (
+  `id_order` int(11) NOT NULL,
+  `nomor_pemesanan` varchar(15) NOT NULL,
+  `id_bar` int(11) NOT NULL,
+  `harga` int(11) NOT NULL,
+  `kuantitas` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `produkpemesanan`
+--
+
+INSERT INTO `produkpemesanan` (`id_order`, `nomor_pemesanan`, `id_bar`, `harga`, `kuantitas`) VALUES
+(10, '572WYiftzcSIDMQ', 4, 15000, 1),
+(11, '572WYiftzcSIDMQ', 6, 15000, 3),
+(12, 'cOBU7CYjiTulKSQ', 1, 10000, 2),
+(13, 'cOBU7CYjiTulKSQ', 6, 15000, 3),
+(14, 'cOBU7CYjiTulKSQ', 8, 15000, 1);
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `detailpemesanan`
+--
+ALTER TABLE `detailpemesanan`
+  ADD PRIMARY KEY (`no_pemesanan`);
 
 --
 -- Indexes for table `fotoproduk`
@@ -103,6 +177,21 @@ ALTER TABLE `fotoproduk`
 ALTER TABLE `itemproduk`
   ADD PRIMARY KEY (`id_bar`),
   ADD KEY `id_foto` (`id_foto`);
+
+--
+-- Indexes for table `pemesanan`
+--
+ALTER TABLE `pemesanan`
+  ADD PRIMARY KEY (`id_pesan`),
+  ADD KEY `no_pemesanan` (`no_pemesanan`);
+
+--
+-- Indexes for table `produkpemesanan`
+--
+ALTER TABLE `produkpemesanan`
+  ADD PRIMARY KEY (`id_order`),
+  ADD KEY `nomor_pemesanan` (`nomor_pemesanan`,`id_bar`),
+  ADD KEY `id_bar` (`id_bar`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -121,6 +210,18 @@ ALTER TABLE `itemproduk`
   MODIFY `id_bar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
+-- AUTO_INCREMENT for table `pemesanan`
+--
+ALTER TABLE `pemesanan`
+  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `produkpemesanan`
+--
+ALTER TABLE `produkpemesanan`
+  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- Constraints for dumped tables
 --
 
@@ -129,6 +230,19 @@ ALTER TABLE `itemproduk`
 --
 ALTER TABLE `itemproduk`
   ADD CONSTRAINT `itemproduk_ibfk_1` FOREIGN KEY (`id_foto`) REFERENCES `fotoproduk` (`id_foto`);
+
+--
+-- Constraints for table `pemesanan`
+--
+ALTER TABLE `pemesanan`
+  ADD CONSTRAINT `pemesanan_ibfk_1` FOREIGN KEY (`no_pemesanan`) REFERENCES `detailpemesanan` (`no_pemesanan`);
+
+--
+-- Constraints for table `produkpemesanan`
+--
+ALTER TABLE `produkpemesanan`
+  ADD CONSTRAINT `produkpemesanan_ibfk_1` FOREIGN KEY (`nomor_pemesanan`) REFERENCES `detailpemesanan` (`no_pemesanan`),
+  ADD CONSTRAINT `produkpemesanan_ibfk_2` FOREIGN KEY (`id_bar`) REFERENCES `itemproduk` (`id_bar`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,14 +1,15 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<?php 
+    include 'support.php';
+    session_start();
+    if(isset($_SESSION['session_username'])){
+        
+?>
+
 <link rel="stylesheet" href="css/header.css">
 <link rel="stylesheet" href="css/body.css">
-<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/style.css">
 
 <script type="text/javascript" src="js/script.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <head>
     <div id="kepala1" class="shadow-sm py-1 sticky-top " >
@@ -19,7 +20,7 @@
             </button>
 
             <div class="collapse navbar-collapse sticky" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto pl-2">
+                
                 <ul class="navbar-nav mr-auto pl-2">
                     <!-- <li class="nav-item active">
                         <a class="nav-link" href="tambahproduk.php">Tambah Barang <span class="sr-only">(current)</span></a>
@@ -32,11 +33,13 @@
                     </li>
                 </ul>
                 <!-- copas ini pak -->
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    ADMIN
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="">Log Out</a>
+                <div class="nav-item dropdown my-2 my-lg-0 ml-5">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ADMIN
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="logout.php">Log Out</a>
+                    </div>
                 </div>
                 <form class="form-inline my-2 my-lg-0" method="GET" action="pencarian.php">
                     <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search" onkeyup="this.value = this.value.toLowerCase();"> 
@@ -50,6 +53,8 @@
 </head>
 
 <body class="bg">
-    
+    <h1> WELCOME, ADMIN! </h1>
 
 </body>
+
+<?php } ?>
