@@ -7,6 +7,7 @@ Fitur & Modul:
 2) Modul Menampilkan Barang
 3) Modul Pemesanan Barang
 4) Validasi data inputan user
+5) Modul Admin (lihat barang, tambah barang, edit barang, lihat pemesanan, lihat detail pemesanan)
 
 Uploaded: 8-9 June 2019:
 1) Perubahan dan Perbaikan Susunan File & Folder
@@ -23,3 +24,12 @@ Uploaded: 15 June 2019:
 *opsi hapus item gak dipakai, karena barang pasti ada/stok=0
 3) Penambahan Shopping Cart pada modul pemesanan
 4) Penambahan modul-modul pendukung transaksi untuk pemesanan barang (keranjang belanja, form (versi terbaru), checkout page)
+
+Uploaded: 18 June 2019:
+1) Penambahan Modul Admin yang berisi modul yang berfungsi untuk:
+  a) Lihat Barang
+  b) Tambah Barang
+  c) Edit Barang
+  d) Lihat Pemesanan
+  e) Lihat Detail Pemesanan
+2) Merapikan skrip/codingan
