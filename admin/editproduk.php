@@ -87,7 +87,7 @@
                     
                     <input type='file' name='gambar' required><br>
                     
-                <td><button>Submit</button></td>
+                <td><button onclick="return confirm('Data sudah benar?');">Submit</button></td>
                 <!-- // echo "<td>".$data['nama_foto']."</td>";
                 // echo "<td>".$data['ukuran']."</td>";
                 // echo "<td>".$data['tipe']."</td>"; -->

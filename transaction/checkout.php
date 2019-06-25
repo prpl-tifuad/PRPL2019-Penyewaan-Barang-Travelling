@@ -91,7 +91,7 @@ $tglpsn=$_SESSION['tanggalpsn'];
         <input type="text" class="form-control" name="totalbayar" value="<?php echo $totalbayar ?>" disabled>
     
         <br><br>
-        Mohon menunjukkan tampilan ini untuk mengambil barang di tempat sesuai pesanan.
+        Mohon mengajukan nomor pemesanan atau menunjukkan tampilan ini untuk mengambil barang di tempat sesuai pesanan.
         (Bisa menunjukkan halaman ini langsung atau diScreenshot)
     </div>
 
@@ -102,5 +102,5 @@ $tglpsn=$_SESSION['tanggalpsn'];
 
         unset($_SESSION['cart']);
     ?>
-    
+     <a href="../index.php"><input type="button" value="Menu Utama" class="btn btn-primary";"></a>
 </body>
