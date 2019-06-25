@@ -33,3 +33,6 @@ Uploaded: 18 June 2019:
   d) Lihat Pemesanan
   e) Lihat Detail Pemesanan
 2) Merapikan skrip/codingan
+
+Uploaded: 25 June 2019:
+1) Penambahan fungsi 'onclick' pada beberapa fungsi tombol
