@@ -80,7 +80,7 @@
               <input type="hidden" name="kodebar" value="<?= $kodebar ?>">
           </div>
               
-          <input type="submit" value="Next" class="btn btn-primary">
+          <input type="submit" value="Next" class="btn btn-primary" onclick="return confirm('Data Anda sudah benar?');">
 
       </div> 
     </div>

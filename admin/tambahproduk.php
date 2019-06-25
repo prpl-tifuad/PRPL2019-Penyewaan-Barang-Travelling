@@ -74,7 +74,7 @@
                         <input type="file" class="form-control" name="gambar" required>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Tambah</button>
+                    <button type="submit" class="btn btn-primary" onclick="return confirm('Tambah Barang?');">Tambah</button>
                 </form>
             </div> 
         </div> 

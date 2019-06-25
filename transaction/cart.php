@@ -4,6 +4,9 @@
 	require 'item.php';
 	// $id_bar=$_GET['id_bar'];
 
+	$_SESSION['cart'];
+
+
 	if(isset($_GET['id_bar']) && !isset($_POST['update']))  { 
 		$sql = "SELECT * FROM itemproduk WHERE id_bar=".$_GET['id_bar'];
 
